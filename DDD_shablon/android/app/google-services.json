@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1053771834208",
+    "project_id": "facetapme",
+    "storage_bucket": "facetapme.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1053771834208:android:d94b2b6010bb59e380b405",
+        "android_client_info": {
+          "package_name": "com.facetap.facetap"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1053771834208-1ls274vqlpg8fnn02hq9gv217d872c9i.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUzAVKnFWUgtwg0wjCjhk7EmOsQx3KUa4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1053771834208-1ls274vqlpg8fnn02hq9gv217d872c9i.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1053771834208-dseu8s7n58d91co0607qtklmjc969uve.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.facetap.facetap",
+                "app_store_id": "1574197295"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

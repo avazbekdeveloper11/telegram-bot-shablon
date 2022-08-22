@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>$(DEVELOPMENT_LANGUAGE)</string>
+	<key>CFBundleDisplayName</key>
+	<string>FaceTap</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>facetap</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleURLTypes</key>
+	<array>
+		<dict>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>fb318544283078645</string>
+			</array>
+		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLName</key>
+			<string>Bundle ID</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.facetap.facetap</string>
+			</array>
+		</dict>
+	</array>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>FUAllFilesUploadedMessage</key>
+	<string>All files have been uploaded</string>
+	<key>FUMaximumConnectionsPerHost</key>
+	<integer>3</integer>
+	<key>FUMaximumUploadOperation</key>
+	<integer>3</integer>
+	<key>FUTimeoutInSeconds</key>
+	<integer>3600</integer>
+	<key>FacebookAppID</key>
+	<string>318544283078645</string>
+	<key>FacebookDisplayName</key>
+	<string>Fctap</string>
+	<key>LSApplicationQueriesSchemes</key>
+	<array>
+		<string>fbapi</string>
+		<string>fb-messenger-share-api</string>
+		<string>fbauth2</string>
+		<string>fbshareextension</string>
+		<string>fb</string>
+		<string>twitter</string>
+		<string>vk</string>
+		<string>whatsapp</string>
+		<string>tg</string>
+		<string>viber</string>
+		<string>wechat</string>
+		<string>line</string>
+		<string>instagram</string>
+		<string>kakaotalk</string>
+		<string>ha</string>
+		<string>linkedin</string>
+	</array>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+	</dict>
+	<key>NSAppleMusicUsageDescription</key>
+	<string>Разрешение нужно для того чтобы изменить мелодию уведомления</string>
+	<key>NSCalendarsUsageDescription</key>
+	<string>Разрешение нужно для того чтобы заполнить дату доставки и заказа</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Разрешение нужно для того чтобы приложение могло использовать камеру</string>
+	<key>NSContactsUsageDescription</key>
+	<string>Разрешение нужно для того чтобы получить контакт Вашего телефона для автозаполнения при регистрации</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>This app needs access to location when open and in the background.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string> app needs access to location when in the background</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>This app needs access to location when open</string>
+	<key>NSMicrophoneUsageDescription</key>
+	<string>Record audio for playback</string>
+	<key>NSMotionUsageDescription</key>
+	<string>Яндекс карте необходим доступ к данным о движении для отображения шагов</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>Разрешение нужно для того чтобы приложение могло использовать галерею</string>
+	<key>NSSpeechRecognitionUsageDescription</key>
+	<string>Яндкес карте необходим доступ для поиска локацию по распознованию речи</string>
+	<key>NSUserTrackingUsageDescription</key>
+	<string>This app uses tracking data to show you personalized ads.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIMainStoryboardFile</key>
+	<string>Main</string>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+</dict>
+</plist>

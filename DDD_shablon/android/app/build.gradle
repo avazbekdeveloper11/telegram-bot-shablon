@@ -1,0 +1,117 @@
+def localProperties = new Properties()
+def localPropertiesFile = rootProject.file('local.properties')
+if (localPropertiesFile.exists()) {
+    localPropertiesFile.withReader('UTF-8') { reader ->
+        localProperties.load(reader)
+    }
+}
+
+def flutterRoot = localProperties.getProperty('flutter.sdk')
+if (flutterRoot == null) {
+    throw new GradleException("Flutter SDK not found. Define location with flutter.sdk in the local.properties file.")
+}
+
+def flutterVersionCode = localProperties.getProperty('flutter.versionCode')
+if (flutterVersionCode == null) {
+    flutterVersionCode = '1'
+}
+
+def flutterVersionName = localProperties.getProperty('flutter.versionName')
+if (flutterVersionName == null) {
+    flutterVersionName = '1.0'
+}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply from: "$flutterRoot/packages/flutter_tools/gradle/flutter.gradle"
+apply plugin: 'com.google.gms.google-services'
+
+def keystoreProperties = new Properties()
+def keystorePropertiesFile = rootProject.file('key.properties')
+if (keystorePropertiesFile.exists()) {
+    keystoreProperties.load(new FileInputStream(keystorePropertiesFile))
+}
+
+android {
+    compileSdkVersion 31
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+
+    lintOptions {
+        disable 'InvalidPackage'
+    }
+
+    defaultConfig {
+        // TODO: Specify your own unique Application ID (https://developer.android.com/studio/build/application-id.html).
+        applicationId "com.facetap.facetap"
+        minSdkVersion 24
+        targetSdkVersion 30
+        multiDexEnabled true
+        versionCode flutterVersionCode.toInteger()
+        versionName flutterVersionName
+    }
+    signingConfigs {
+        release {
+            keyAlias keystoreProperties['keyAlias']
+            keyPassword keystoreProperties['keyPassword']
+            storeFile keystoreProperties['storeFile'] ? file(keystoreProperties['storeFile']) : null
+            storePassword keystoreProperties['storePassword']
+        }
+    }
+    buildTypes {
+        release {
+//            signingConfig signingConfigs.release
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    packagingOptions {
+        pickFirst '**/*.so'
+        pickFirst '**/libyuv.so'
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+}
+
+flutter {
+    source '../..'
+}
+
+dependencies {
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlin_version"
+
+    implementation platform('com.google.firebase:firebase-bom:26.6.0')
+    implementation 'com.google.firebase:firebase-analytics-ktx'
+
+    implementation("com.android.billingclient:billing-ktx:4.0.0")
+    //gson
+    implementation 'com.google.code.gson:gson:2.8.6'
+    def banubaSdkVersion = '1.19.0'
+    implementation "com.banuba.sdk:camera-sdk:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:camera-ui-sdk:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:core-sdk:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:core-ui-sdk:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:ve-flow-sdk:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:ve-timeline-sdk:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:ve-sdk:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:ve-ui-sdk:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:ve-gallery-sdk:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:ve-effects-sdk:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:effect-player-adapter:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:ar-cloud:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:ve-audio-browser-sdk:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:banuba-token-storage-sdk:${banubaSdkVersion}"
+    implementation "com.banuba.sdk:ve-export-sdk:${banubaSdkVersion}"
+    implementation 'com.google.guava:guava:27.0.1-android'
+    implementation "com.google.firebase:firebase-inappmessaging-display:19.1.5"
+    implementation "com.android.support:multidex:1.0.3"
+
+}
